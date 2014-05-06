@@ -38,7 +38,7 @@ $( document ).ready(function() {
 		var preImg = preDiv.find("img");
 		//change selected images attributes
 		preImg.attr("src",beforeSelect[prevDataIndex]);
-		preImg.css("width","7.5%");
+		preImg.css("width","7%");
 		
 		//alert(prevDataIndex);
 		//get clicked div
@@ -52,7 +52,7 @@ $( document ).ready(function() {
 		var currentImg=$(this).find("img");
 		//change attribute of currently selected images
 		currentImg.attr("src",afterSelect[nextDataIndex]);
-		currentImg.css("width","18.5%");
+		currentImg.css("width","20.5%");
 		
 		//alert(nextDataIndex);		
 	});	
@@ -237,6 +237,10 @@ $( document ).ready(function() {
 		//$('#page3').attr('next-img', storeObject.backGroundImage2);  
 		//$('#page3').attr('next-audio', storeObject.playbackFile2);  
 	});
+	
+	$( "#page4" ).click(function() {
+		$.mobile.changePage("#page1",{ transition: "slidedown"});
+	});	
 	// Store object
 	var storeObject = {
 		backGroundImage : '',
