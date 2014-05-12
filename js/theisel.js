@@ -233,7 +233,7 @@ $( document ).ready(function() {
 		//alert('url(' + storeObject.backGroundImage2 + ') no-repeat');
 		var audio = new Audio(storeObject.playbackFile2);
 		audio.play();
-		$('#page4').css('background', 'url(' + storeObject.backGroundImage2 + ') no-repeat scroll center center / cover  rgba(0, 0, 0, 0)');
+		$('#page4').css('background', 'url(' + storeObject.backGroundImage2 + ') no-repeat scroll center center / 100% 100%  rgba(0, 0, 0, 0)');
 		
 		//$('#page3').attr('next-img', storeObject.backGroundImage2);  
 		//$('#page3').attr('next-audio', storeObject.playbackFile2);  
