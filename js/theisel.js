@@ -250,13 +250,15 @@ $( document ).ready(function() {
 	$( "#back-home" ).click(function() {
 		$.mobile.changePage("#page1",{ transition: "slidedown"});
 	});	
+		
 		/*
-		$(document).on('pageshow', '#page4', function(){     
+		$("#page4").on("pagechange",function(event,data){alert("asdasd");})
+		$(document).on('pagechange', '#page3', function(){
 			alert("hello");
 			$('#page4').css('min-height', '50%');
 			alert("after");
-		});
-		
+		});*/
+		/*
 		$(document).on('pagechange ', '#page4' ,function(){
 		// Code goes here
 				alert("after asd");
@@ -289,4 +291,41 @@ $( document ).ready(function() {
 		}
 	});	
 	//shaarer page coding starts	
+	$("#sharer-div").click(function() {
+		//var title = encodeURIComponent('Jellybeez');
+        //var summary = encodeURIComponent('JellyBeez doesn’t create anything inappropriate for any age. Our goal is to be kid safe for all ages.');
+        //var url = encodeURIComponent('http://www.jellybeez.com/');
+        //var image = encodeURIComponent('http://www.jellybeez.com/wp-content/uploads/2012/02/JellyBeez-Slider1.jpg');
+		//alert('http://www.facebook.com/sharer.php?s=100&amp;p[title]=' + title + '&amp;p[summary]=' + summary + '&amp;p[url]=' + url + '&amp;p[images][0]=' + image);
+		/* FB.init({
+			//appId      : '24177975681352',//color apps
+			appId      : '267304476783935',//virtue mart
+			status     : true,
+			xfbml      : true,
+			version    : 'v2.0',
+		  });
+		
+		
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=267304476783935&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));*/
+		//alert("https://www.facebook.com/dialog/feed?app_id=241779752681352&display=popup&caption="+title+"&link="+url+"&redirect_uri=https://developers.facebook.com/tools/explorer");
+        window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.jellybeez.com','sharer','toolbar=0,status=0');
+     });
+     
+     $("#website-div").click(function() {
+		 window.open('http://www.jellybeez.com','jellybeez','toolbar=0,status=0');
+	 });
+	 
+	 $("#twitter-div").click(function() {
+		window.open('https://twitter.com/meadsblog','jellybeez','toolbar=0,status=0');
+	 });
+	 
+	 $("#like-div").click(function() {
+		window.open('https://www.facebook.com/meadsblog','jellybeez','toolbar=0,status=0');
+	 });
 });
