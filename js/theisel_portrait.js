@@ -80,4 +80,7 @@ $( document ).ready(function() {
 		
 		//alert(nextDataIndex);		
 	});	
+	if(window.innerHeight < window.innerWidth){		
+		window.location.href = 'landscape.html';		
+	}
 });

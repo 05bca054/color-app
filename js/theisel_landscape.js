@@ -118,4 +118,7 @@ $( document ).ready(function() {
         }
 
     }); */
+    if(window.innerHeight > window.innerWidth){		
+		window.location.href = 'index.html';		
+	}
 });
