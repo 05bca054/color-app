@@ -19,6 +19,7 @@
   <!--<script src="js/color-app.js"></script>-->
   <script src="js/scooch.min.js"></script>
   <script src="js/theisel.js"></script>
+  <script src="js/theisel_portrait.js"></script>
   <style>
 	.ui-page ui-page-theme-a {
 		background: url(img/background.png);
@@ -29,6 +30,64 @@
   </style>
 </head>
 <body>	
+	
+	<div data-role="page" data-control-title="help" id="help" style="background: url(img/background.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+		background-size:cover;">
+			<div data-role="popup" id="popupBasic" data-overlay-theme="b" data-position-to="window" style="height:85%;">
+				<a href="#" data-rel="back" class="ui-btn-right">
+					<img src="img/How-to SVGs/With Parents_Close icon.svg" style="margin-left: 92%;width: 8%;">
+				</a>
+				<!--<p>This is a completely basic popup, no options set.</p>-->
+				<div class="m-scooch m-fluid m-scooch-photos">
+				  <!-- the slider -->
+				  <div class="m-scooch-inner">
+					<!-- the items -->
+					<div class="m-item m-active">
+					  <img src="img/How-to SVGs/With Parents_How-to-1.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-2.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-3.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-4.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-5.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-6.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-7.svg">
+					</div>
+				  </div>
+				 </div>			  
+			</div>
+		
+			<img style="width: 100%; height: 100%;" src="img/help/color-lab.png">
+			<img style="height: 100%;width: 50%; float: left;" src="img/help/play-btn.png" id="play-btn">
+			<a href="#popupBasic" data-rel="popup"><img style="height: 100%;width: 50%; margin-top: 20%;" src="img/help/how-to-play-btn.png" id="how-to-play-btn"></a>
+			<img style="width: 100%; height: 100%;" src="img/App Icon-01.svg">
+	</div>
+	
+	
+	<div data-role="page" data-control-title="help" id="how-to-play" style="background: url(img/background.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+		background-size:cover;">
+		<div data-role="content">
+			<img style="width: 100%; height: 100%;" src="img/help/color-lab.png">
+			<img style="height: 100%;width: 50%; float: left;" src="img/help/play-btn.png" id="play-btn">
+			<img style="height: 100%;width: 50%; margin-top: 20%;" src="img/help/how-to-play-btn.png" id="how-to-play-btn">
+			<img style="width: 100%; height: 100%;" src="img/App Icon-01.svg">
+		</div>
+	</div>
+	
   <div data-role="page" data-control-title="Home" id="page1" style="background: url(img/background.png);
 		background-repeat:no-repeat;
 		background-position:0px -30px;
@@ -171,19 +230,19 @@
 			<!-- the items yellow color -->
 			<div class="m-item" style="background: url('img/black/Color-Lab_Black Viles Stand.svg');
 					background-repeat:no-repeat;
-					background-position:0px 65px;
-					background-size:291px 180px;">
+					background-position:0 75%;
+					background-size:100% 65%;">
 			  <div style="display: inline" data-controltype="image" id="black1" class="blacksvg slide-items" color-img="img/black/Color-Lab_Black-1c.svg" audio-file="audio/black/Color-Lab-Black-1a.wav" color-img2="img/black/Color-Lab_Black-1b.svg" audio-file2="audio/black/Color-Lab-Black-1b.wav">
-				  <img style="width: 23%; height: 100%;margin-top: 0%;" src="img/black/Color-Lab_Black-1a.svg">
+				  <img style="width: 17%; height: 100%;margin-left: 15%;" src="img/black/Color-Lab_Black-1a.svg">
 			  </div>
 			  <div style="display: inline" data-controltype="image" id="black2" class="blacksvg slide-items" color-img="img/black/Color-Lab_Black-2c.svg" audio-file="audio/black/Color-Lab-Black-2a.wav" color-img2="img/black/Color-Lab_Black-2b.svg" audio-file2="audio/black/Color-Lab-Black-2b.wav">
-				  <img style="width: 23%; height: 100%" src="img/black/Color-Lab_Black-2a.svg">
+				  <img style="width: 17%; height: 100%" src="img/black/Color-Lab_Black-2a.svg">
 			  </div>
 			  <div style="display: inline" data-controltype="image" id="black3" class="blacksvg slide-items" color-img="img/black/Color-Lab_Black-3c.svg" audio-file="audio/black/Color-Lab-Black-3a.wav" color-img2="img/black/Color-Lab_Black-3b.svg" audio-file2="audio/black/Color-Lab-Black-3b.wav">
-				  <img style="width: 23%; height: 100%" src="img/black/Color-Lab_Black-3a.svg">
+				  <img style="width: 17%; height: 100%" src="img/black/Color-Lab_Black-3a.svg">
 			  </div>
 			  <div style="display: inline" data-controltype="image" id="black4" class="blacksvg slide-items" color-img="img/black/Color-Lab_Black-4c.svg" audio-file="audio/black/Color-Lab-Black-4a.wav" color-img2="img/black/Color-Lab_Black-4b.svg" audio-file2="audio/black/Color-Lab-Black-4b.wav">
-				  <img style="width: 23%; height: 100%" src="img/black/Color-Lab_Black-4a.svg">
+				  <img style="width: 17%; height: 100%" src="img/black/Color-Lab_Black-4a.svg">
 			  </div>
 			</div>
 			
@@ -216,34 +275,34 @@
           <hr style="height:3px; background-color:#ccc; border:0; margin-top:12px; margin-bottom:12px;">
           <div></div>
           <div class="control-slider" style="margin-top: 15%;">
-			  <div style="display: inline" class="control-div img-selected" data-controltype="image" id="redsvg-sel" data-index="1">
+			  <div style="display: inline" class="control-div img-selected" data-controltype="image" id="redsvg-sel" data-index="1" audio-file="audio/Button_Click/Button-Click-1.wav">
 				  <img style="width: 20.5%; height: 100%;" id="swred"  class="bottomtheisel" src="img/01 Red.svg">
 			  </div>
-			  <div style="display: inline" class="control-div" data-controltype="image" id="orangesvg"  data-index="2">
+			  <div style="display: inline" class="control-div" data-controltype="image" id="orangesvg"  data-index="2" audio-file="audio/Button_Click/Button-Click-2.wav">
 				  <img style="width: 7%; height: 100%" id="sworange" class="bottomtheisel" src="img/02-orange.svg">
 			  </div>
-			  <div style="display: inline" class="control-div" data-controltype="image" id="yellowsvg" data-index="3">
+			  <div style="display: inline" class="control-div" data-controltype="image" id="yellowsvg" data-index="3" audio-file="audio/Button_Click/Button-Click-3.wav">
 				  <img style="width: 7%; height: 100%" id="swyellow" class="bottomtheisel" src="img/03-yellow.svg">
 			  </div>
-			  <div style="display: inline" class="control-div" data-controltype="image" id="greensvg" data-index="4">
+			  <div style="display: inline" class="control-div" data-controltype="image" id="greensvg" data-index="4" audio-file="audio/Button_Click/Button-Click-4.wav">
 				  <img style="width: 7%; height: 100%" id="swgreen" class="bottomtheisel" src="img/04-green.svg">
 			  </div>
-			  <div style="display: inline" class="control-div" data-controltype="image" id="skybluesvg" data-index="5">
+			  <div style="display: inline" class="control-div" data-controltype="image" id="skybluesvg" data-index="5" audio-file="audio/Button_Click/Button-Click-5.wav">
 				  <img style="width: 7%; height: 100%" id="swskyblue" class="bottomtheisel" src="img/05-blue.svg">
 			  </div>
-			  <div style="display: inline" class="control-div" data-controltype="image" id="bluesvg" data-index="6">
+			  <div style="display: inline" class="control-div" data-controltype="image" id="bluesvg" data-index="6" audio-file="audio/Button_Click/Button-Click-6.wav">
 				  <img style="width: 7%; height: 100%" id="swblue" class="bottomtheisel" src="img/06-indigo.svg">
 			  </div>
-			  <div style="display: inline" class="control-div" data-controltype="image" id="marronsvg" data-index="7">
+			  <div style="display: inline" class="control-div" data-controltype="image" id="marronsvg" data-index="7" audio-file="audio/Button_Click/Button-Click-7.wav">
 				  <img style="width: 7%; height: 100%" id="swmarron" class="bottomtheisel" src="img/07-violet.svg">
 			  </div>
-			  <div style="display: inline" class="control-div" data-controltype="image" id="whitesvg" data-index="8">
+			  <div style="display: inline" class="control-div" data-controltype="image" id="whitesvg" data-index="8" audio-file="audio/Button_Click/Button-Click-8.wav">
 				  <img style="width: 7%; height: 100%" id="swwhite" class="bottomtheisel" src="img/08-white.svg">
 			  </div>
-			  <div style="display: inline" class="control-div" data-controltype="image" id="blacksvg" data-index="9">
+			  <div style="display: inline" class="control-div" data-controltype="image" id="blacksvg" data-index="9" audio-file="audio/Button_Click/Button-Click-9.wav">
 				  <img style="width: 7%; height: 100%" id="swblack" class="bottomtheisel" src="img/09-black.svg">
 			  </div>
-			  <div style="display: inline" class="control-div" data-controltype="image" id="brownsvg" data-index="10">
+			  <div style="display: inline" class="control-div" data-controltype="image" id="brownsvg" data-index="10" audio-file="audio/Button_Click/Button-Click-10.wav">
 				  <img style="width: 7%; height: 100%" id="swbrown" class="bottomtheisel" src="img/10-brown.svg">
 			  </div>
 			</div>
@@ -259,61 +318,51 @@
       </div>
   </div>
   
-  <div data-role="page" data-control-title="lock pad" id="page5" style="background:none repeat scroll 0 0 #ADD8E6">
+  <div data-role="page" data-control-title="lock pad" id="page5" style="background:url('img/settings/Lock Pad/Load-Screen_Background Pop Up.svg') no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0)">
       <div data-role="content" style="padding: %">
 		  <div class="lockpad-text">
-			<h2>Grown-Ups Only!</h2>			
-			<h5>To access, Please enter the numbers:</h5>
-			<h2>SIX, TWO, SIX</h2>
-			<div id="warning" style="display:none; color: #008000;">Please enter correct number.</div>
-			<div class="ui-field-contain">
-				<!--<label for="number">Full name:</label>--->
-				<input type="text" name="number" id="number" readonly>
-			 </div>
+			<h3 id="rand-nos" style="margin-top: 25%;margin-left: 4%;"></h3>
+			<input type="hidden" name="number" id="number">
+			<input type="hidden" name="setNumber" id="setNumber">
 		  </div>
 		  
-		  <div style="margin-left: 13%;">
+		  <div style="margin-left: 4%;">
 			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num1" data-index="1">
-				  <img style="height: 100%" id="numimg1" class="bottomtheisel" src="img/num_pads/1-filled-64.ico">
+				  <img style="width: 30%" id="numimg1" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_1-Cresent.svg">
 			  </div>
 			  
 			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num2" data-index="2">
-				  <img style="height: 100%" id="numimg2" class="bottomtheisel" src="img/num_pads/2-filled-64.ico">
+				  <img style="width: 30%" id="numimg2" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_2-Heart.svg">
 			  </div>
 			  
 			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num3" data-index="3">
-				  <img style="height: 100%" id="numimg3" class="bottomtheisel" src="img/num_pads/3-filled-64.ico">
+				  <img style="width: 30%" id="numimg3" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_3-Clover.svg">
 			  </div>
 			  
 			  <div>
 				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num4" data-index="4">
-					  <img style="height: 100%" id="numimg4" class="bottomtheisel" src="img/num_pads/4-filled-64.ico">
+					  <img style="width: 30%" id="numimg4" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_4-Cross.svg">
 				  </div>
 				  
 				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num5" data-index="5">
-					  <img style="height: 100%" id="numimg5" class="bottomtheisel" src="img/num_pads/5-filled-64.ico">
+					  <img style="width: 30%" id="numimg5" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_5-Star.svg">
 				  </div>
 				  
 				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num6" data-index="6">
-					  <img style="height: 100%" id="numimg6" class="bottomtheisel" src="img/num_pads/6-filled-64.ico">
+					  <img style="width: 30%" id="numimg6" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_6-Square.svg">
 				  </div>
 			  </div>
 			  
 			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num7" data-index="7">
-				  <img style="height: 100%" id="numimg7" class="bottomtheisel" src="img/num_pads/7-filled-64.ico">
+				  <img style="width: 30%" id="numimg7" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_7-Oval.svg">
 			  </div>
 			  
 			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num8" data-index="8">
-				  <img style="height: 100%" id="numimg8" class="bottomtheisel" src="img/num_pads/8-filled-64.ico">
+				  <img style="width: 30%" id="numimg8" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_8-Triangle.svg">
 			  </div>
 			  
 			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num9" data-index="9">
-				  <img style="height: 100%" id="numimg9" class="bottomtheisel" src="img/num_pads/9-filled-64.ico">
-			  </div>
-			  <div>
-				  <div style="display: inline; margin-left: 27.5%;" class="numpad-div" data-controltype="image" id="num10" data-index="10">
-					  <img style="height: 100%" id="numimg10" class="bottomtheisel" src="img/num_pads/0-filled-64.ico">
-				  </div>
+				  <img style="width: 30%" id="numimg9" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_9-Circle.svg">
 			  </div>
 			</div>
       </div>

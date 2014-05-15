@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>color-app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!--<link href="css/codiqa.ext.min.css" rel="stylesheet">-->
+  <link href="css/jquery.mobile-1.4.2.min.css" rel="stylesheet">
+  <link href="css/scooch.min.landscape.css" rel="stylesheet">
+  <link href="css/scooch-style.min.css" rel="stylesheet">
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/jquery.mobile-1.4.2.min.js"></script>
+  <!--<script src='http://connect.facebook.net/en_US/all.js'></script>-->
+  <!--<script src="js/codiqa.ext.min.js"></script>-->
+  <!--<script src="js/color-app.js"></script>-->
+  <script src="js/scooch.min.js"></script>
+  <script src="js/theisel.js"></script>
+  <script src="js/theisel_landscape.js"></script>
+  <style>
+	.ui-page ui-page-theme-a {
+		background: url(img/background.png);
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size:cover;  
+	}
+  </style>
+</head>
+<body>	
+  <div data-role="page" data-control-title="help" id="help" style="background: url(img/background.png);
+		background-repeat:no-repeat;
+		background-position:0px 0px;
+		background-size:cover;">
+			<div data-role="popup" id="popupBasic" data-overlay-theme="b" data-position-to="window" style="height:85%;">
+				<a href="#" data-rel="back" class="ui-btn-right">
+					<img src="img/How-to SVGs/With Parents_Close icon.svg" style="margin-left: 92%;width: 8%;">
+				</a>
+				<!--<p>This is a completely basic popup, no options set.</p>-->
+				<div class="m-scooch m-fluid m-scooch-photos">
+				  <!-- the slider -->
+				  <div class="m-scooch-inner">
+					<!-- the items -->
+					<div class="m-item m-active">
+					  <img src="img/How-to SVGs/With Parents_How-to-1.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-2.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-3.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-4.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-5.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-6.svg">
+					</div>
+					<div class="m-item">
+					  <img src="img/How-to SVGs/With Parents_How-to-7.svg">
+					</div>
+				  </div>
+				 </div>			  
+			</div>
+			
+			<img style="width: 60%; height: 100%;margin-top:4%;margin-left:4%;" src="img/help/color-lab.png">
+			<div style="width:60%;float:left;" id="left-div">
+				<img style="height: 100%;width: 90%;margin-top: 20%; float: left;margin-left: 3%;" src="img/help/play-btn.png" id="play-btn">
+				<a href="#popupBasic" data-rel="popup"><img style="height: 100%;width: 71%; margin-top: 10%;margin-left: 12%;" src="img/help/how-to-play-btn.png" id="how-to-play-btn"></a>
+			</div>
+			<div style="width:40%;float: right;" id="right-div">
+				<img style="width: 89.5%; height: 100%;" src="img/App Icon-01.svg" id="app-icon">
+			</div>			
+ 
+			
+  </div>
+	
+  <div data-role="page" data-control-title="Home" id="page1" style="background: url(img/background.png);
+		background-repeat:no-repeat;
+		background-position:0px -30px;
+		background-size:cover;">
+      <div data-role="content">
+		  <div class="share-lock">
+			<img style="width: 10%;" src="img/Settings icon.svg" id="share-lock-img">
+		  </div>
+		  <div class="m-scooch m-fluid m-scooch-photos">
+		  <!-- the slider -->
+		  <div class="m-scooch-inner" style="height:50%;">
+			<!-- the items red color -->
+			<div class="m-item m-active">
+			  <div style="display: inline" data-controltype="image" id="red1" class="redsvg slide-items" color-img="img/red/Color-Lab_Red-1c.svg" audio-file="audio/red/Color-Lab-Red-1a.wav" color-img2="img/red/Color-Lab_Red-1b.svg" audio-file2="audio/red/Color-Lab-Red-1b.wav">
+				  <img style="width: 13%; height: 100%;" src="img/red/Color-Lab_Red-1a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="red2" class="redsvg slide-items" color-img="img/red/Color-Lab_Red-2c.svg" audio-file="audio/red/Color-Lab-Red-2a.wav" color-img2="img/red/Color-Lab_Red-2b.svg" audio-file2="audio/red/Color-Lab-Red-2b.wav">
+				  <img style="width: 13%; height: 100%" src="img/red/Color-Lab_Red-2a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="red3" class="redsvg slide-items" color-img="img/red/Color-Lab_Red-3c.svg" audio-file="audio/red/Color-Lab-Red-3a.wav" color-img2="img/red/Color-Lab_Red-3b.svg" audio-file2="audio/red/Color-Lab-Red-3b.wav">
+				  <img style="width: 13%; height: 100%" src="img/red/Color-Lab_Red-3a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="red4" class="redsvg slide-items" color-img="img/red/Color-Lab_Red-4c.svg" audio-file="audio/red/Color-Lab-Red-4a.wav" color-img2="img/red/Color-Lab_Red-4b.svg" audio-file2="audio/red/Color-Lab-Red-4b.wav">
+				  <img style="width: 13%; height: 100%" src="img/red/Color-Lab_Red-4a.svg">
+			  </div>
+			</div>
+			
+			<!-- the items orange color -->
+			<div class="m-item">
+			  <div style="display: inline" data-controltype="image" id="orange1" class="orangesvg slide-items" color-img="img/orange/Color-Lab_orange-1c.svg" audio-file="audio/orange/Color-Lab-Orange-1a.wav" color-img2="img/orange/Color-Lab_orange-1b.svg" audio-file2="audio/orange/Color-Lab-Orange-1b.wav">
+				  <img style="width: 13%; height: 100%;" src="img/orange/Color-Lab_Orange-1a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="orange2" class="orangesvg slide-items" color-img="img/orange/Color-Lab_orange-2c.svg" audio-file="audio/orange/Color-Lab-Orange-2a.wav" color-img2="img/orange/Color-Lab_orange-2b.svg" audio-file2="audio/orange/Color-Lab-Orange-2b.wav">
+				  <img style="width: 13%; height: 100%" src="img/orange/Color-Lab_Orange-2a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="orange3" class="orangesvg slide-items" color-img="img/orange/Color-Lab_orange-3c.svg" audio-file="audio/orange/Color-Lab-Orange-3a.wav" color-img2="img/orange/Color-Lab_orange-3b.svg" audio-file2="audio/orange/Color-Lab-Orange-3b.wav">
+				  <img style="width: 13%; height: 100%" src="img/orange/Color-Lab_Orange-3a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="orange4" class="orangesvg slide-items" color-img="img/orange/Color-Lab_orange-4c.svg" audio-file="audio/orange/Color-Lab-Orange-4a.wav" color-img2="img/orange/Color-Lab_orange-4b.svg" audio-file2="audio/orange/Color-Lab-Orange-4b.wav">
+				  <img style="width: 13%; height: 100%" src="img/orange/Color-Lab_Orange-4a.svg">
+			  </div>
+			</div>
+			
+			<!-- the items yellow color -->
+			<div class="m-item">
+			  <div style="display: inline" data-controltype="image" id="yellow1" class="yellowsvg slide-items" color-img="img/yellow/Color-Lab_Yellow-1c.svg" audio-file="audio/yellow/Color-Lab-Yellow-1a.wav" color-img2="img/yellow/Color-Lab_Yellow-1b.svg" audio-file2="audio/yellow/Color-Lab-Yellow-1b.wav">
+				  <img style="width: 13%; height: 100%;" src="img/yellow/Color-Lab_Yellow-1a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="yellow2" class="yellowsvg slide-items" color-img="img/yellow/Color-Lab_Yellow-2c.svg" audio-file="audio/yellow/Color-Lab-Yellow-2a.wav" color-img2="img/yellow/Color-Lab_Yellow-2b.svg" audio-file2="audio/yellow/Color-Lab-Yellow-2b.wav">
+				  <img style="width: 13%; height: 100%" src="img/yellow/Color-Lab_Yellow-2a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="yellow3" class="yellowsvg slide-items" color-img="img/yellow/Color-Lab_Yellow-3c.svg" audio-file="audio/yellow/Color-Lab-Yellow-3a.wav" color-img2="img/yellow/Color-Lab_Yellow-3b.svg" audio-file2="audio/yellow/Color-Lab-Yellow-3b.wav">
+				  <img style="width: 13%; height: 100%" src="img/yellow/Color-Lab_Yellow-3a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="yellow4" class="yellowsvg slide-items" color-img="img/yellow/Color-Lab_Yellow-4c.svg" audio-file="audio/yellow/Color-Lab-Yellow-4a.wav" color-img2="img/yellow/Color-Lab_Yellow-4b.svg" audio-file2="audio/yellow/Color-Lab-Yellow-4b.wav">
+				  <img style="width: 13%; height: 100%" src="img/yellow/Color-Lab_Yellow-4a.svg">
+			  </div>
+			</div>
+			
+			<!-- the items green color -->
+			<div class="m-item">
+			  <div style="display: inline" data-controltype="image" id="green1" class="greensvg slide-items" color-img="img/green/Color-Lab_Green-1c.svg" audio-file="audio/green/Color-Lab-Green-1a.wav" color-img2="img/green/Color-Lab_Green-1b.svg" audio-file2="audio/green/Color-Lab-Green-1b.wav">
+				  <img style="width: 8%; height: 100%;margin: 0 5% 0 15%;" src="img/green/Color-Lab_Green-1a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="green2" class="greensvg slide-items" color-img="img/green/Color-Lab_Green-2c.svg" audio-file="audio/green/Color-Lab-Green-2a.wav" color-img2="img/green/Color-Lab_Green-2b.svg" audio-file2="audio/green/Color-Lab-Green-2b.wav">
+				  <img style="width: 8%; height: 100%;margin: 0 5%;" src="img/green/Color-Lab_Green-2a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="green3" class="greensvg slide-items" color-img="img/green/Color-Lab_Green-3c.svg" audio-file="audio/green/Color-Lab-Green-3a.wav" color-img2="img/green/Color-Lab_Green-3b.svg" audio-file2="audio/green/Color-Lab-Green-3b.wav">
+				  <img style="width: 8%; height: 100%;margin: 0 5%;" src="img/green/Color-Lab_Green-3a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="green4" class="greensvg slide-items" color-img="img/green/Color-Lab_Green-4c.svg" audio-file="audio/green/Color-Lab-Green-4a.wav" color-img2="img/green/Color-Lab_Green-4b.svg" audio-file2="audio/green/Color-Lab-Green-4b.wav">
+				  <img style="width: 8%; height: 100%;margin: 0 13% 0 5%;" src="img/green/Color-Lab_Green-4a.svg">
+			  </div>
+			</div>
+			
+			<!-- the items blue color -->
+			<div class="m-item">
+			  <div style="display: inline" data-controltype="image" id="blue1" class="bluesvg slide-items" color-img="img/blue/Color-Lab_Blue-1c.svg" audio-file="audio/blue/Color-Lab-Blue-1a.wav" color-img2="img/blue/Color-Lab_Blue-1b.svg" audio-file2="audio/blue/Color-Lab-Blue-1b.wav">
+				  <img style="width: 13%; height: 100%;" src="img/blue/Color-Lab_Blue-1a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="blue2" class="bluesvg slide-items" color-img="img/blue/Color-Lab_Blue-2c.svg" audio-file="audio/blue/Color-Lab-Blue-2a.wav" color-img2="img/blue/Color-Lab_Blue-2b.svg" audio-file2="audio/blue/Color-Lab-Blue-2b.wav">
+				  <img style="width: 13%; height: 100%" src="img/blue/Color-Lab_Blue-2a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="blue3" class="bluesvg slide-items" color-img="img/blue/Color-Lab_Blue-3c.svg" audio-file="audio/blue/Color-Lab-Blue-3a.wav" color-img2="img/blue/Color-Lab_Blue-3b.svg" audio-file2="audio/blue/Color-Lab-Blue-3b.wav">
+				  <img style="width: 13%; height: 100%" src="img/blue/Color-Lab_Blue-3a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="blue4" class="bluesvg slide-items" color-img="img/blue/Color-Lab_Blue-4c.svg" audio-file="audio/blue/Color-Lab-Blue-4a.wav" color-img2="img/blue/Color-Lab_Blue-4b.svg" audio-file2="audio/blue/Color-Lab-Blue-4b.wav">
+				  <img style="width: 13%; height: 100%" src="img/blue/Color-Lab_Blue-4a.svg">
+			  </div>
+			</div>
+			
+			<!-- the items indigo color -->
+			<div class="m-item">
+			  <div style="display: inline" data-controltype="image" id="indigo1" class="indigosvg slide-items" color-img="img/indigo/Color-Lab_indigo-1c.svg" audio-file="audio/indigo/Color-Lab-Indigo-1a.wav" color-img2="img/indigo/Color-Lab_indigo-1b.svg" audio-file2="audio/indigo/Color-Lab-Indigo-1b.wav">
+				  <img style="width: 13%; height: 100%;" src="img/indigo/Color-Lab_Indigo-1a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="indigo2" class="indigosvg slide-items" color-img="img/indigo/Color-Lab_indigo-2c.svg" audio-file="audio/indigo/Color-Lab-Indigo-2a.wav" color-img2="img/indigo/Color-Lab_indigo-2b.svg" audio-file2="audio/indigo/Color-Lab-Indigo-2b.wav">
+				  <img style="width: 13%; height: 100%" src="img/indigo/Color-Lab_Indigo-2a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="indigo3" class="indigosvg slide-items" color-img="img/indigo/Color-Lab_indigo-3c.svg" audio-file="audio/indigo/Color-Lab-Indigo-3a.wav" color-img2="img/indigo/Color-Lab_indigo-3b.svg" audio-file2="audio/indigo/Color-Lab-Indigo-3b.wav">
+				  <img style="width: 13%; height: 100%" src="img/indigo/Color-Lab_Indigo-3a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="indigo4" class="indigosvg slide-items" color-img="img/indigo/Color-Lab_indigo-4c.svg" audio-file="audio/indigo/Color-Lab-Indigo-4a.wav" color-img2="img/indigo/Color-Lab_indigo-4b.svg" audio-file2="audio/indigo/Color-Lab-Indigo-4b.wav">
+				  <img style="width: 13%; height: 100%" src="img/indigo/Color-Lab_Indigo-4a.svg">
+			  </div>
+			</div>
+			
+			<!-- the items violet color -->
+			<div class="m-item">
+			  <div style="display: inline" data-controltype="image" id="violet1" class="violetsvg slide-items" color-img="img/violet/Color-Lab_Violet-1c.svg" audio-file="audio/violet/Color-Lab-Violet-1a.wav" color-img2="img/violet/Color-Lab_Violet-1b.svg" audio-file2="audio/violet/Color-Lab-Violet-1b.wav">
+				  <img style="width: 13%; height: 100%;" src="img/violet/Color-Lab_Violet-1a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="violet2" class="violetsvg slide-items" color-img="img/violet/Color-Lab_Violet-2c.svg" audio-file="audio/violet/Color-Lab-Violet-2a.wav" color-img2="img/violet/Color-Lab_Violet-2b.svg" audio-file2="audio/violet/Color-Lab-Violet-2b.wav">
+				  <img style="width: 13%; height: 100%" src="img/violet/Color-Lab_Violet-2a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="violet3" class="violetsvg slide-items" color-img="img/violet/Color-Lab_Violet-3c.svg" audio-file="audio/violet/Color-Lab-Violet-3a.wav" color-img2="img/violet/Color-Lab_Violet-3b.svg" audio-file2="audio/violet/Color-Lab-Violet-3b.wav">
+				  <img style="width: 13%; height: 100%" src="img/violet/Color-Lab_Violet-3a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="violet4" class="violetsvg slide-items" color-img="img/violet/Color-Lab_Violet-4c.svg" audio-file="audio/violet/Color-Lab-Violet-4a.wav" color-img2="img/violet/Color-Lab_Violet-4b.svg" audio-file2="audio/violet/Color-Lab-Violet-4b.wav">
+				  <img style="width: 13%; height: 100%" src="img/violet/Color-Lab_Violet-4a.svg">
+			  </div>
+			</div>
+			
+			<!-- the items white color -->
+			<div class="m-item">
+			  <div style="display: inline" data-controltype="image" id="white1" class="whitesvg slide-items" color-img="img/white/Color-Lab_White-1c.svg" audio-file="audio/white/Color-Lab-White-1a.wav" color-img2="img/white/Color-Lab_White-1b.svg" audio-file2="audio/white/Color-Lab-White-1b.wav">
+				  <img style="width: 13%; height: 100%;" src="img/white/Color-Lab_White-1a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="white2" class="whitesvg slide-items" color-img="img/white/Color-Lab_White-2c.svg" audio-file="audio/white/Color-Lab-White-2a.wav" color-img2="img/white/Color-Lab_White-2b.svg" audio-file2="audio/white/Color-Lab-White-2b.wav">
+				  <img style="width: 13%; height: 100%" src="img/white/Color-Lab_White-2a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="white3" class="whitesvg slide-items" color-img="img/white/Color-Lab_White-3c.svg" audio-file="audio/white/Color-Lab-White-3a.wav" color-img2="img/white/Color-Lab_White-3b.svg" audio-file2="audio/white/Color-Lab-White-3b.wav">
+				  <img style="width: 13%; height: 100%" src="img/white/Color-Lab_White-3a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="white4" class="whitesvg slide-items" color-img="img/white/Color-Lab_White-4c.svg" audio-file="audio/white/Color-Lab-White-4a.wav" color-img2="img/white/Color-Lab_White-4b.svg" audio-file2="audio/white/Color-Lab-White-4b.wav">
+				  <img style="width: 13%; height: 100%" src="img/white/Color-Lab_White-4a.svg">
+			  </div>
+			</div>
+			
+			<!-- the items yellow color -->
+			<div class="m-item" style="background: url('img/black/Color-Lab_Black Viles Stand.svg');
+					background-repeat:no-repeat;
+					background-position:47% 65%;
+					background-size:72% 79%;">
+			  <div style="display: inline" data-controltype="image" id="black1" class="blacksvg slide-items" color-img="img/black/Color-Lab_Black-1c.svg" audio-file="audio/black/Color-Lab-Black-1a.wav" color-img2="img/black/Color-Lab_Black-1b.svg" audio-file2="audio/black/Color-Lab-Black-1b.wav">
+				  <img style="width: 6%; height: 100%;margin: 0 3% 0 25%;" src="img/black/Color-Lab_Black-1a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="black2" class="blacksvg slide-items" color-img="img/black/Color-Lab_Black-2c.svg" audio-file="audio/black/Color-Lab-Black-2a.wav" color-img2="img/black/Color-Lab_Black-2b.svg" audio-file2="audio/black/Color-Lab-Black-2b.wav">
+				  <img style="width: 6%; height: 100%;margin: 0 3.5%;" src="img/black/Color-Lab_Black-2a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="black3" class="blacksvg slide-items" color-img="img/black/Color-Lab_Black-3c.svg" audio-file="audio/black/Color-Lab-Black-3a.wav" color-img2="img/black/Color-Lab_Black-3b.svg" audio-file2="audio/black/Color-Lab-Black-3b.wav">
+				  <img style="width: 6%; height: 100%;margin: 0 3.5%;" src="img/black/Color-Lab_Black-3a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="black4" class="blacksvg slide-items" color-img="img/black/Color-Lab_Black-4c.svg" audio-file="audio/black/Color-Lab-Black-4a.wav" color-img2="img/black/Color-Lab_Black-4b.svg" audio-file2="audio/black/Color-Lab-Black-4b.wav">
+				  <img style="width: 6%; height: 100%;margin: 0 25% 0 3%;" src="img/black/Color-Lab_Black-4a.svg">
+			  </div>
+			</div>
+			
+			<!-- the items brown color -->
+			<div class="m-item">
+			  <div style="display: inline" data-controltype="image" id="red1" class="brownsvg slide-items" color-img="img/brown/Color-Lab_Brown-1c.svg" audio-file="audio/brown/Color-Lab-Brown-1a.wav" color-img2="img/brown/Color-Lab_Brown-1b.svg" audio-file2="audio/brown/Color-Lab-Brown-1b.wav">
+				  <img style="width: 13%; height: 100%;" src="img/brown/Color-Lab_Brown-1a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="red2" class="brownsvg slide-items" color-img="img/brown/Color-Lab_Brown-2c.svg" audio-file="audio/brown/Color-Lab-Brown-2a.wav" color-img2="img/brown/Color-Lab_Brown-2b.svg" audio-file2="audio/brown/Color-Lab-Brown-2b.wav">
+				  <img style="width: 13%; height: 100%" src="img/brown/Color-Lab_Brown-2a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="red3" class="brownsvg slide-items" color-img="img/brown/Color-Lab_Brown-3c.svg" audio-file="audio/brown/Color-Lab-Brown-3a.wav" color-img2="img/brown/Color-Lab_Brown-3b.svg" audio-file2="audio/brown/Color-Lab-Brown-3b.wav">
+				  <img style="width: 13%; height: 100%" src="img/brown/Color-Lab_Brown-3a.svg">
+			  </div>
+			  <div style="display: inline" data-controltype="image" id="brown4" class="brownsvg slide-items" color-img="img/brown/Color-Lab_Brown-4c.svg" audio-file="audio/brown/Color-Lab-Brown-4a.wav" color-img2="img/brown/Color-Lab_Brown-4b.svg" audio-file2="audio/brown/Color-Lab-Brown-4b.wav">
+				  <img style="width: 13%; height: 100%" src="img/brown/Color-Lab_Brown-4a.svg">
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('.m-scooch').scooch();
+		$(document).on('pagebeforeshow', "#color", function (event, data) {
+			var parameters = $(this).data("url").split("?")[1];
+			parameter = parameters.replace("parameter=","");  
+			alert(parameter);
+		});
+		
+		</script>
+          <!--<hr style="height:3px; background-color:#ccc; border:0; margin-top:12px; margin-bottom:12px;">-->
+          <div></div>
+          <div class="control-slider">
+			  <div style="display: inline" class="control-div img-selected" data-controltype="image" id="redsvg-sel" data-index="1" audio-file="audio/Button_Click/Button-Click-1.wav">
+				  <img style="width: 11.5%; height: 100%;" id="swred"  class="bottomtheisel" src="img/01 Red.svg">
+			  </div>
+			  <div style="display: inline" class="control-div" data-controltype="image" id="orangesvg"  data-index="2" audio-file="audio/Button_Click/Button-Click-2.wav">
+				  <img style="width: 4%; height: 100%" id="sworange" class="bottomtheisel" src="img/02-orange.svg">
+			  </div>
+			  <div style="display: inline" class="control-div" data-controltype="image" id="yellowsvg" data-index="3" audio-file="audio/Button_Click/Button-Click-3.wav">
+				  <img style="width: 4%; height: 100%" id="swyellow" class="bottomtheisel" src="img/03-yellow.svg">
+			  </div>
+			  <div style="display: inline" class="control-div" data-controltype="image" id="greensvg" data-index="4" audio-file="audio/Button_Click/Button-Click-4.wav">
+				  <img style="width: 4%; height: 100%" id="swgreen" class="bottomtheisel" src="img/04-green.svg">
+			  </div>
+			  <div style="display: inline" class="control-div" data-controltype="image" id="skybluesvg" data-index="5" audio-file="audio/Button_Click/Button-Click-5.wav">
+				  <img style="width: 4%; height: 100%" id="swskyblue" class="bottomtheisel" src="img/05-blue.svg">
+			  </div>
+			  <div style="display: inline" class="control-div" data-controltype="image" id="bluesvg" data-index="6" audio-file="audio/Button_Click/Button-Click-6.wav">
+				  <img style="width: 4%; height: 100%" id="swblue" class="bottomtheisel" src="img/06-indigo.svg">
+			  </div>
+			  <div style="display: inline" class="control-div" data-controltype="image" id="marronsvg" data-index="7" audio-file="audio/Button_Click/Button-Click-7.wav">
+				  <img style="width: 4%; height: 100%" id="swmarron" class="bottomtheisel" src="img/07-violet.svg">
+			  </div>
+			  <div style="display: inline" class="control-div" data-controltype="image" id="whitesvg" data-index="8" audio-file="audio/Button_Click/Button-Click-8.wav">
+				  <img style="width: 4%; height: 100%" id="swwhite" class="bottomtheisel" src="img/08-white.svg">
+			  </div>
+			  <div style="display: inline" class="control-div" data-controltype="image" id="blacksvg" data-index="9" audio-file="audio/Button_Click/Button-Click-9.wav">
+				  <img style="width: 4%; height: 100%" id="swblack" class="bottomtheisel" src="img/09-black.svg">
+			  </div>
+			  <div style="display: inline" class="control-div" data-controltype="image" id="brownsvg" data-index="10" audio-file="audio/Button_Click/Button-Click-10.wav">
+				  <img style="width: 4%; height: 100%" id="swbrown" class="bottomtheisel" src="img/10-brown.svg">
+			  </div>
+			</div>
+			
+      </div><!--UI content-->
+  </div>
+  <div data-role="page" data-control-title="splash" id="page3" style="background: url('img/load-screen-01.svg') no-repeat">
+      <div data-role="content" style="padding: %">
+      </div>
+  </div>
+  <div data-role="page" data-control-title="splash" id="page4" style="background: url('img/load-screen-01.svg') no-repeat">
+      <div data-role="content" style="padding: %">
+      </div>
+  </div>
+  
+  <div data-role="page" data-control-title="lock pad" id="page5" style="background:url('img/settings/Lock Pad/Load-Screen_Background Pop Up.svg') no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0)">
+      <div data-role="content" style="padding: %">
+		  <div class="lockpad-text">
+			<h3 id="rand-nos" style="margin-top: 12%;margin-left: 4%;"></h3>
+			<input type="hidden" name="number" id="number">
+			<input type="hidden" name="setNumber" id="setNumber">
+		  </div>
+		  
+		  <div style="margin-left: 4%;">
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num1" data-index="1">
+				  <img style="width: 17%" id="numimg1" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_1-Cresent.svg">
+			  </div>
+			  
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num2" data-index="2">
+				  <img style="width: 17%" id="numimg2" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_2-Heart.svg">
+			  </div>
+			  
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num3" data-index="3">
+				  <img style="width: 17%" id="numimg3" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_3-Clover.svg">
+			  </div>
+			  
+			  
+				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num4" data-index="4">
+					  <img style="width: 17%" id="numimg4" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_4-Cross.svg">
+				  </div>
+				  
+				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num5" data-index="5">
+					  <img style="width: 17%" id="numimg5" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_5-Star.svg">
+				  </div>
+				  
+				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num6" data-index="6">
+					  <img style="width: 17%" id="numimg6" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_6-Square.svg">
+				  </div>
+			  
+			  
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num7" data-index="7">
+				  <img style="width: 17%" id="numimg7" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_7-Oval.svg">
+			  </div>
+			  
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num8" data-index="8">
+				  <img style="width: 17%" id="numimg8" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_8-Triangle.svg">
+			  </div>
+			  
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num9" data-index="9">
+				  <img style="width: 17%" id="numimg9" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_9-Circle.svg">
+			  </div>
+			</div>
+      </div>
+  </div>
+  
+  <div data-role="page" data-control-title="splash" id="sharer" style="background: none repeat scroll 0 0 #ADD8E6">
+      <div data-role="content" style="padding: %">
+		   <div>
+			  <div style="display: inline;" class="firstsharer-div" data-controltype="image" id="twitter-div" data-index="1">
+				  <img style="height: 50%;width: 48%;" id="twitter" class="sharerpage" src="img/sharer/Share Settings-Horz_1-Tweet.svg">
+			  </div>
+			  
+			  <div style="display: inline;" class="firstsharer-div" data-controltype="image" id="sharer-div" data-index="2">
+				  <img style="height: 50%;width: 48%;" id="sharer" class="sharerpage" src="img/sharer/Share Settings-Horz_2-Share-Us.svg">
+			  </div>
+			  
+			  <div style="display: inline;" class="secondsharer-div" data-controltype="image" id="like-div" data-index="3">
+				  <img style="height: 50%;width: 48%;" id="facebook-like" class="sharerpage" src="img/sharer/Share Settings-Horz_3-Like-Us.svg">
+			  </div>
+			  
+			  <div style="display: inline;" class="secondsharer-div" data-controltype="image" id="website-div" data-index="4">
+				  <img style="height: 50%;width: 48%;" id="website" class="sharerpage" src="img/sharer/Share Settings-Horz_4-Website.svg">
+			  </div>
+			  
+			  <div style="	margin-left: 32%;
+							margin-top: -39%;
+							position: absolute;
+							width: 50%" class="back-div" data-controltype="image" id="backhome-div" data-index="2">
+				  <img style="height: 50%;width: 48%;" id="back-home" class="sharerpage" src="img/sharer/Share Settings-Horz_Back-Button.svg">
+			  </div>
+			  
+			  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+		  </div>
+      </div>
+  </div>
+</body>
+</html>

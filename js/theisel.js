@@ -1,61 +1,22 @@
 $( document ).ready(function() {
 	// Handler for .ready() called.
-	var winHeight=$(window).height();
-	var winWidth=$(window).width();
 	
-    var beforeSelect = new Array();
-	beforeSelect[1]="img/01-red.svg";
-	beforeSelect[2]="img/02-orange.svg";
-	beforeSelect[3]="img/03-yellow.svg";
-	beforeSelect[4]="img/04-green.svg";
-	beforeSelect[5]="img/05-blue.svg";
-	beforeSelect[6]="img/06-indigo.svg";
-	beforeSelect[7]="img/07-violet.svg";
-	beforeSelect[8]="img/08-white.svg";
-	beforeSelect[9]="img/09-black.svg";
-	beforeSelect[10]="img/10-brown.svg";
+	var backaudio = new Audio("audio/Background Audio Files/Looping-Background-Music.wav");
+	backaudio.addEventListener('ended', function() {
+		this.currentTime = 0;
+		this.play();
+	}, false);
+	backaudio.play();
+		
+	//alert(winHeight);
 	
-	var afterSelect = new Array();
-	afterSelect[1]="img/01 Red.svg";
-	afterSelect[2]="img/02 Orange.svg";
-	afterSelect[3]="img/03 Yellow.svg";
-	afterSelect[4]="img/04 Green.svg";
-	afterSelect[5]="img/05 Blue.svg";
-	afterSelect[6]="img/06 Indigo.svg";
-	afterSelect[7]="img/07 Violet.svg";
-	afterSelect[8]="img/08 White.svg";
-	afterSelect[9]="img/09 Black.svg";
-	afterSelect[10]="img/10 Brown.svg";
-		
-	$( ".control-div" ).click(function() {
-		//find selected div 		
-		var preDiv = $( ".control-slider" ).find(".img-selected");		
-		//get selected div data-index
-		var prevDataIndex=preDiv.attr("data-index");
-		//remove class from selected div
-		preDiv.removeClass("img-selected");
-		//get image of the selected div
-		var preImg = preDiv.find("img");
-		//change selected images attributes
-		preImg.attr("src",beforeSelect[prevDataIndex]);
-		preImg.css("width","7%");
-		
-		//alert(prevDataIndex);
-		//get clicked div
-		var nextDataIndex = $(this).attr("data-index");
-		//add removed class to make current div active
-		$(this).addClass("img-selected");
-		//move slide related to current div
-		$('.m-scooch').scooch('move', nextDataIndex);
-		
-		//get image under currently clicked div
-		var currentImg=$(this).find("img");
-		//change attribute of currently selected images
-		currentImg.attr("src",afterSelect[nextDataIndex]);
-		currentImg.css("width","20.5%");
-		
-		//alert(nextDataIndex);		
-	});	
+	//alert(device);
+	
+	
+	//var carouselMaxHeight = winHeight * 40 / 100;
+	//alert(carouselMaxHeight);
+	
+	//$(".m-scooch-inner").css("max-height",carouselMaxHeight);
 	
 	//three level multi touching
 	//red selected array
@@ -243,7 +204,15 @@ $( document ).ready(function() {
 		$.mobile.changePage("#page1",{ transition: "slidedown"});
 	});	
 	
-	$( ".share-lock" ).click(function() {
+	$( ".share-lock" ).click(function() {		
+		var firstChar = (Math.floor(Math.random()*9)+1).toString();
+		var secondChar = (Math.floor(Math.random()*9)+1).toString();
+		var thirdChar = (Math.floor(Math.random()*9)+1).toString();
+		//alert(firstChar+secondChar+thirdChar);
+		var randNum = firstChar+secondChar+thirdChar;
+		//alert(triConvert(randNum));
+		$("#setNumber").val(randNum);
+		$("#rand-nos").html(triConvert(randNum));
 		$.mobile.changePage("#page5",{ transition: "slidedown"});
 	});	
 	
@@ -251,19 +220,6 @@ $( document ).ready(function() {
 		$.mobile.changePage("#page1",{ transition: "slidedown"});
 	});	
 		
-		/*
-		$("#page4").on("pagechange",function(event,data){alert("asdasd");})
-		$(document).on('pagechange', '#page3', function(){
-			alert("hello");
-			$('#page4').css('min-height', '50%');
-			alert("after");
-		});*/
-		/*
-		$(document).on('pagechange ', '#page4' ,function(){
-		// Code goes here
-				alert("after asd");
-		});
-		*/
 	// Store object
 	var storeObject = {
 		backGroundImage : '',
@@ -275,19 +231,22 @@ $( document ).ready(function() {
 	
 	$(".numpad-div").click(function() {		
 		var curVal = $("#number").val();
+		var matchNum = $("#setNumber").val();
 		if($("#number").val().length<3)
 			$("#number").val(curVal+$(this).attr("data-index"));
 		//alert($("#number").val());
-		if($("#number").val()=="626")
+		if($("#number").val()==matchNum)
 		{
+			$("#number").val("");
 			$.mobile.changePage("#sharer",{ transition: "slidedown"});
-			$("#number").val("");
 		}
-		if($("#number").val().length==3 && $("#number").val()!="626")
+		if($("#number").val().length==3 && $("#number").val()!=matchNum)
 		{
+			//alert("test");
 			$("#number").val("");
-			$('#warning').show();
-			$('#warning').delay(5000).fadeOut();
+			$.mobile.changePage("#page1",{ transition: "slidedown"});	
+			/*			$('#warning').show();
+			$('#warning').delay(5000).fadeOut();*/
 		}
 	});	
 	//shaarer page coding starts	
@@ -322,10 +281,65 @@ $( document ).ready(function() {
 	 });
 	 
 	 $("#twitter-div").click(function() {
-		window.open('https://twitter.com/meadsblog','jellybeez','toolbar=0,status=0');
+		window.open('https://twitter.com/JellyBeezApps','jellybeez','toolbar=0,status=0');
 	 });
 	 
 	 $("#like-div").click(function() {
-		window.open('https://www.facebook.com/meadsblog','jellybeez','toolbar=0,status=0');
+		window.open('https://www.facebook.com/jellybeezapps','jellybeez','toolbar=0,status=0');
 	 });
+	 
+	 
+	 //orientation issues resolve
+	$( window ).on( "orientationchange", function( event ) {
+		//alert(event.orientation);
+		if(event.orientation=="landscape")
+		{			
+			//alert("landscape");
+			window.location.href = 'landscape.html';
+		}
+		else
+		{
+			window.location.href = 'index.html';
+			//alert("portrait");
+		}
+	});
+	
+	//generating random numbers
+	
+	function triConvert(num){
+		var ones = new Array('ZERO', ' Cresent', ' Heart', 'Clover', ' Cross', ' Star', ' Square', 'Oval', ' Triangle', 'Circle');
+		//var tens = new Array('', '', ' twenty', ' thirty', ' forty', ' fifty', ' sixty', ' seventy', ' eighty', ' ninety');
+		//var hundred = ' hundred';
+		var output = '';
+		var numString = num.toString();
+		
+		if (num == 0) {
+			return 'dontAddBigSufix';
+		}
+		//the case of 10, 11, 12 ,13, .... 19 
+		if (num < 20) {
+			output = ones[num];
+			return output;
+		}
+
+		//100 and more
+		if (numString.length == 3) {
+			output = ones[parseInt(numString.charAt(0))]+", ";
+			output += ones[parseInt(numString.charAt(1))]+", ";
+			output += ones[parseInt(numString.charAt(2))];
+			return output;
+		}
+
+		output += ones[parseInt(numString.charAt(0))]+", ";
+		output += ones[parseInt(numString.charAt(1))];
+
+		return output;
+	}
+	//Play and how-to-play button
+	$("#play-btn").click(function() {
+		$.mobile.changePage("#page1",{ transition: "slidedown"});
+	});
+	/*$("#how-to-play-btn").click(function() {
+		$.mobile.changePage("#page1",{ transition: "slidedown"});
+	});*/
 });
