@@ -320,4 +320,5 @@ $( document ).ready(function() {
 			$('.m-scooch').scooch('next');
 		}
 	});
+	//$(document).delegate('.ui-content', 'touchmove', false);​
 });

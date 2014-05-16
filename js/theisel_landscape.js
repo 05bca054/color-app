@@ -111,11 +111,12 @@ $( document ).ready(function() {
 	*/
 	 $("#popupBasic").on({
         popupafteropen: function () {
-			$(this).css("top","10%");
-			$(this).css("bottom","10%");
-			$(this).css("left","10%");
+			//$(this).css("top","10%");
+			$(this).css("left","7%");
 			$(this).css("right","10%");
-			$(this).css("width","80%");
+			$(this).css("width","85%");
+			$("#popupBasic-popup").css("top","8%");
+			$("#popupBasic-popup").css("bottom","8%");
            /* $(this).popup("reposition", {
                 x: 40,
                 y: 40,
