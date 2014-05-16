@@ -8,17 +8,6 @@ $( document ).ready(function() {
 	}, false);
 	backaudio.play();
 		
-	//alert(winHeight);
-	
-	//alert(device);
-	
-	
-	//var carouselMaxHeight = winHeight * 40 / 100;
-	//alert(carouselMaxHeight);
-	
-	//$(".m-scooch-inner").css("max-height",carouselMaxHeight);
-	
-	//three level multi touching
 	//red selected array
 	var redSelected = new Array();
 	redSelected[1]="img/red/Color-Lab_Red-1c.svg";
@@ -195,9 +184,6 @@ $( document ).ready(function() {
 		var audio = new Audio(storeObject.playbackFile2);
 		audio.play();
 		$('#page4').css('background', 'url(' + storeObject.backGroundImage2 + ') no-repeat scroll center center / 100% 100%  rgba(0, 0, 0, 0)');
-		
-		//$('#page3').attr('next-img', storeObject.backGroundImage2);  
-		//$('#page3').attr('next-audio', storeObject.playbackFile2);  
 	});
 	
 	$( "#page4" ).click(function() {
@@ -208,9 +194,9 @@ $( document ).ready(function() {
 		var firstChar = (Math.floor(Math.random()*9)+1).toString();
 		var secondChar = (Math.floor(Math.random()*9)+1).toString();
 		var thirdChar = (Math.floor(Math.random()*9)+1).toString();
-		//alert(firstChar+secondChar+thirdChar);
+		
 		var randNum = firstChar+secondChar+thirdChar;
-		//alert(triConvert(randNum));
+		
 		$("#setNumber").val(randNum);
 		$("#rand-nos").html(triConvert(randNum));
 		$.mobile.changePage("#page5",{ transition: "slidedown"});
@@ -234,7 +220,7 @@ $( document ).ready(function() {
 		var matchNum = $("#setNumber").val();
 		if($("#number").val().length<3)
 			$("#number").val(curVal+$(this).attr("data-index"));
-		//alert($("#number").val());
+		
 		if($("#number").val()==matchNum)
 		{
 			$("#number").val("");
@@ -242,37 +228,12 @@ $( document ).ready(function() {
 		}
 		if($("#number").val().length==3 && $("#number").val()!=matchNum)
 		{
-			//alert("test");
 			$("#number").val("");
 			$.mobile.changePage("#page1",{ transition: "slidedown"});	
-			/*			$('#warning').show();
-			$('#warning').delay(5000).fadeOut();*/
 		}
 	});	
 	//shaarer page coding starts	
 	$("#sharer-div").click(function() {
-		//var title = encodeURIComponent('Jellybeez');
-        //var summary = encodeURIComponent('JellyBeez doesn’t create anything inappropriate for any age. Our goal is to be kid safe for all ages.');
-        //var url = encodeURIComponent('http://www.jellybeez.com/');
-        //var image = encodeURIComponent('http://www.jellybeez.com/wp-content/uploads/2012/02/JellyBeez-Slider1.jpg');
-		//alert('http://www.facebook.com/sharer.php?s=100&amp;p[title]=' + title + '&amp;p[summary]=' + summary + '&amp;p[url]=' + url + '&amp;p[images][0]=' + image);
-		/* FB.init({
-			//appId      : '24177975681352',//color apps
-			appId      : '267304476783935',//virtue mart
-			status     : true,
-			xfbml      : true,
-			version    : 'v2.0',
-		  });
-		
-		
-		(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=267304476783935&version=v2.0";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));*/
-		//alert("https://www.facebook.com/dialog/feed?app_id=241779752681352&display=popup&caption="+title+"&link="+url+"&redirect_uri=https://developers.facebook.com/tools/explorer");
         window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.jellybeez.com','sharer','toolbar=0,status=0');
      });
      
@@ -342,4 +303,21 @@ $( document ).ready(function() {
 	/*$("#how-to-play-btn").click(function() {
 		$.mobile.changePage("#page1",{ transition: "slidedown"});
 	});*/
+	$("#popupBasic").click(function(e){
+		var winHeight=$(window).height();
+		var winWidth=$(window).width();
+	   var parentOffset = $(this).parent().offset(); 
+	   //or $(this).offset(); if you really just want the current element's offset
+	   var relX = e.pageX - parentOffset.left;
+	   var relY = e.pageY - parentOffset.top;
+	   var hlafWidth = winWidth/2;
+		if(hlafWidth>relX)
+		{
+			$('.m-scooch').scooch('prev');
+		}
+		else
+		{
+			$('.m-scooch').scooch('next');
+		}
+	});
 });

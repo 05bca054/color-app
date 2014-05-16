@@ -101,23 +101,29 @@ $( document ).ready(function() {
 	});	
 	/*$("#how-to-play-btn").click(function() {
 		//$.mobile.changePage("#page1",{ transition: "slidedown"});
+		alert("asd");
 		$( "#popupBasic" ).popup("reposition", {
                 x: 70,
                 y: 115,
-                positionTo: "window"
+                positionTo: "origin"
             });
 	});
 	*/
-	 /*$("#popupBasic").on({
+	 $("#popupBasic").on({
         popupafteropen: function () {
-            $(this).popup("reposition", {
+			$(this).css("top","10%");
+			$(this).css("bottom","10%");
+			$(this).css("left","10%");
+			$(this).css("right","10%");
+			$(this).css("width","80%");
+           /* $(this).popup("reposition", {
                 x: 40,
                 y: 40,
                 positionTo: "origin"
-            });
+            });*/
         }
 
-    }); */
+    });
     if(window.innerHeight > window.innerWidth){		
 		window.location.href = 'index.html';		
 	}
