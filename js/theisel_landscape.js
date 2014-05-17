@@ -4,7 +4,7 @@ $( document ).ready(function() {
 	var winHeight=$(window).height();
 	var winWidth=$(window).width();
 	
-	if(winHeight==640 && winWidth==1136)
+	if(winHeight==640 && winWidth==1136 || winHeight==320 && winWidth==568)
 		var device = "Iphone5";
 	else if(winHeight==640 && winWidth==960 )
 		var device = "Iphone4";
@@ -16,9 +16,13 @@ $( document ).ready(function() {
 	if(device=="Iphone5")
 	{
 		var carouselMaxHeight = winHeight * 50 / 100;
-		$("#share-lock-img").css("width", "4%");
-		$("#page1").css("background-position","0 -100px");
+		var controlSliderHeight = winHeight * 40 / 100;
+		
+		//$("#page1").css("background-position","0 -35px");
 		$("#page1").css("background-size","100% 100%");
+		$(".control-slider").css("height",controlSliderHeight+"px");
+		$(".control-slider").css("max-height",controlSliderHeight+"px");
+		//$(".ui-content").css("padding-bottom","0px");
 		
 		//first screen
 		$("#app-icon").css("width","72.5%");
@@ -27,6 +31,12 @@ $( document ).ready(function() {
 	}
 	else
 	{
+		var controlSliderHeight = winHeight * 32 / 100;
+		var adjustmentDiv = winHeight * 8 / 100;
+		$("#share-lock-img").css("margin-bottom", "6%");
+		$(".control-slider").css("height",controlSliderHeight+"px");
+		$(".control-slider").css("max-height",controlSliderHeight+"px");
+		$("#adjustment-div").css("height",adjustmentDiv+"px");
 		var carouselMaxHeight = winHeight * 40 / 100;
 	}
 	
@@ -95,7 +105,7 @@ $( document ).ready(function() {
 		var currentImg=$(this).find("img");
 		//change attribute of currently selected images
 		currentImg.attr("src",afterSelect[nextDataIndex]);
-		currentImg.css("width","11.5%");
+		currentImg.css("width","10.5%");
 		
 		//alert(nextDataIndex);		
 	});	
