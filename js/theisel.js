@@ -168,27 +168,36 @@ $( document ).ready(function() {
 		//alert('transparent url(' + storeObject.backGroundImage + ') !important');
 		var audio = new Audio(storeObject.playbackFile);
 		audio.play();
-		$('#page3').css('background', 'url(' + storeObject.backGroundImage + ') no-repeat');  
-		//$('#page3').attr('next-img', storeObject.backGroundImage2);  
-		//$('#page3').attr('next-audio', storeObject.playbackFile2);  
+		//alert("start playing");
+		audio.addEventListener('ended', function() {
+			//alert("long audio ended");
+			$( "#page3" ).click(function() {
+				$.mobile.changePage("#page4",{ transition: "slidedown"});
+				$("#page3").unbind( "click" );
+			});	
+		}, true);
+		$('#page3').css('background', 'url(' + storeObject.backGroundImage + ') no-repeat');
 	});
 	
-	
+	//$("body").css("line-height", "1.3");
 	//click on color image page
-	$( "#page3" ).click(function() {
-		$.mobile.changePage("#page4",{ transition: "slidedown"});
-	});	
+	
 	
 	$(document).on('pagebeforeshow', '#page4', function(){     
-		//alert('url(' + storeObject.backGroundImage2 + ') no-repeat');
+		//alert('url(' + storeObject.backGroundImage2 + ') no-repeat');		
 		var audio = new Audio(storeObject.playbackFile2);
 		audio.play();
+		audio.addEventListener('ended', function() {
+			//alert("short audio ended");
+			$( "#page4" ).click(function() {
+				$.mobile.changePage("#page1",{ transition: "slidedown"});
+				$("#page4").unbind( "click" );
+			});	
+		}, true);
 		$('#page4').css('background', 'url(' + storeObject.backGroundImage2 + ') no-repeat scroll center center / 100% 100%  rgba(0, 0, 0, 0)');
 	});
 	
-	$( "#page4" ).click(function() {
-		$.mobile.changePage("#page1",{ transition: "slidedown"});
-	});	
+	
 	
 	$( ".share-lock" ).click(function() {		
 		var firstChar = (Math.floor(Math.random()*9)+1).toString();
@@ -203,6 +212,7 @@ $( document ).ready(function() {
 	});	
 	
 	$( "#back-home" ).click(function() {
+		$("body").removeAttr( 'style' );
 		$.mobile.changePage("#page1",{ transition: "slidedown"});
 	});	
 		
@@ -224,6 +234,7 @@ $( document ).ready(function() {
 		if($("#number").val()==matchNum)
 		{
 			$("#number").val("");
+			$("body").css("line-height", "0.3");
 			$.mobile.changePage("#sharer",{ transition: "slidedown"});
 		}
 		if($("#number").val().length==3 && $("#number").val()!=matchNum)
@@ -233,20 +244,20 @@ $( document ).ready(function() {
 		}
 	});	
 	//shaarer page coding starts	
-	$("#sharer-div").click(function() {
-        window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.jellybeez.com','sharer','toolbar=0,status=0');
+	$("#sharer-img").click(function() {
+        window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.jellybeez.com','_system');
      });
      
-     $("#website-div").click(function() {
-		 window.open('http://www.jellybeez.com','jellybeez','toolbar=0,status=0');
+     $("#website").click(function() {
+		 window.open('http://www.jellybeez.com','_system');
 	 });
 	 
-	 $("#twitter-div").click(function() {
-		window.open('https://twitter.com/JellyBeezApps','jellybeez','toolbar=0,status=0');
+	 $("#twitter").click(function() {
+		window.open('https://twitter.com/JellyBeezApps','_system');
 	 });
 	 
-	 $("#like-div").click(function() {
-		window.open('https://www.facebook.com/jellybeezapps','jellybeez','toolbar=0,status=0');
+	 $("#facebook-like").click(function() {
+		window.open('https://www.facebook.com/jellybeezapps','_system');
 	 });
 	 
 	 

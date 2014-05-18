@@ -73,10 +73,6 @@
 				<img style="height: 100%;width: 77%;margin-top: 47%; float: left;margin-left: 10%;" src="img/help/play-btn.png" id="play-btn">
 				<a href="#popupBasic" data-rel="popup"><img style="height: 100%;width: 60%; margin-top: 10%;margin-left: 18%;" src="img/help/how-to-play-btn.png" id="how-to-play-btn"></a>
 			</div>
-			<!--<div style="width:40%;float: right;" id="right-div">
-				<img style="width: 97.5%; height: 100%;" src="img/App Icon-01.svg" id="app-icon">
-			</div>			-->
- 
 			
   </div>
 	
@@ -314,12 +310,12 @@
   <div data-role="page" data-control-title="lock pad" id="page5" style="background:url('img/settings/Lock Pad/Load-Screen_Background Pop Up.svg') no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0)">
       <div data-role="content" style="padding-bottom: 0%">
 		  <div class="lockpad-text">
-			<h3 id="rand-nos" style="margin-top: 12%;margin-left: 35%;"></h3>
+			<h3 id="rand-nos" style="margin-top: 9%;margin-left: 32%;"></h3>
 			<input type="hidden" name="number" id="number">
 			<input type="hidden" name="setNumber" id="setNumber">
 		  </div>
 		  
-		  <div style="margin-left: 40%;">
+		  <div style="margin-left: 35%;">
 			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num1" data-index="1">
 				  <img style="width: 15%" id="numimg1" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_1-Cresent.svg">
 			  </div>
@@ -361,10 +357,9 @@
       </div>
   </div>
   
-  <div data-role="page" data-control-title="splash" id="sharer" style="background: none repeat scroll 0 0 #ADD8E6">
-      <div data-role="content" style="padding: %">
-		   <div>
-			  <div style="display: inline;" class="firstsharer-div" data-controltype="image" id="twitter-div" data-index="1">
+  <div data-role="page" data-control-title="splash" id="sharer">
+      <div data-role="content" style="padding: 0%;">
+			  <!--<div style="display: inline;" class="firstsharer-div" data-controltype="image" id="twitter-div" data-index="1">
 				  <img style="height: 50%;width: 48%;" id="twitter" class="sharerpage" src="img/sharer/Share Settings-Horz_1-Tweet.svg">
 			  </div>
 			  
@@ -387,8 +382,17 @@
 				  <img style="height: 50%;width: 48%;" id="back-home" class="sharerpage" src="img/sharer/Share Settings-Horz_Back-Button.svg">
 			  </div>
 			  
-			  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-		  </div>
+			  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>-->
+			  <img style="float:left;" id="twitter" class="sharerpage" src="img/sharer/Share Settings-Horz_1-Tweet.svg" style="line-height: 0;">
+			  <img id="sharer-img" class="sharerpage" src="img/sharer/Share Settings-Horz_2-Share-Us.svg" style="line-height: 0;">
+			  <img style="float:left;line-height: 0;" id="facebook-like" class="sharerpage" src="img/sharer/Share Settings-Horz_3-Like-Us.svg">
+			  <img style="line-height: 0;" id="website" class="sharerpage" src="img/sharer/Share Settings-Horz_4-Website.svg">
+			  <div style="	margin-left: 38%;
+							margin-top: -39%;
+							position: absolute;
+							width: 50%" class="back-div" data-controltype="image" id="backhome-div" data-index="2">
+				  <img style="height: 50%;width: 48%;" id="back-home" class="sharerpage" src="img/sharer/Share Settings-Horz_Back-Button.svg">
+			  </div>
       </div>
   </div>
 </body>

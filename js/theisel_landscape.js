@@ -28,6 +28,12 @@ $( document ).ready(function() {
 		$("#app-icon").css("width","72.5%");
 		$("#left-div").css("width","54%");
 		$("#right-div").css("width","46%");
+		
+		//set social icons
+		$("#twitter").attr("src","img/sharer/tweet5.jpg");
+		$("#sharer-img").attr("src","img/sharer/share5.jpg");
+		$("#facebook-like").attr("src","img/sharer/like5.jpg");
+		$("#website").attr("src","img/sharer/beez5.jpg");
 	}
 	else
 	{
@@ -38,11 +44,12 @@ $( document ).ready(function() {
 		$(".control-slider").css("max-height",controlSliderHeight+"px");
 		$("#adjustment-div").css("height",adjustmentDiv+"px");
 		var carouselMaxHeight = winHeight * 40 / 100;
-	}
-	
-	if(device=="Iphone4")
-	{
-		$("#app-icon").css("width","92.3%");
+		
+		//set social icons
+		$("#twitter").attr("src","img/sharer/tweet.jpg");
+		$("#sharer-img").attr("src","img/sharer/share.jpg");
+		$("#facebook-like").attr("src","img/sharer/like.jpg");
+		$("#website").attr("src","img/sharer/beez.jpg");
 	}
 	
 	//$(".m-scooch-inner").css("max-height",carouselMaxHeight);    
@@ -80,7 +87,7 @@ $( document ).ready(function() {
 			this.currentTime = 0;
 			this.play();
 		}, false);*/
-		clickaud.play();
+		clickaud.play();		
 		
 		var preDiv = $( ".control-slider" ).find(".img-selected");		
 		//get selected div data-index
