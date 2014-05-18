@@ -132,7 +132,7 @@ $( document ).ready(function() {
 			$(this).css("left","11%");
 			$(this).css("right","10%");
 			$(this).css("width","77%");
-			$("#popupBasic-popup").css("top","8%");
+			$("#popupBasic-popup").css("top","10%");
 			$("#popupBasic-popup").css("bottom","8%");
            /* $(this).popup("reposition", {
                 x: 40,
