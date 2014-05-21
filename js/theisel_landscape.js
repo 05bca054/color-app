@@ -87,7 +87,7 @@ $( document ).ready(function() {
 			this.currentTime = 0;
 			this.play();
 		}, false);*/
-		clickaud.play();		
+		clickaud.play();
 		
 		var preDiv = $( ".control-slider" ).find(".img-selected");		
 		//get selected div data-index
@@ -116,6 +116,7 @@ $( document ).ready(function() {
 		
 		//alert(nextDataIndex);		
 	});	
+	
 	/*$("#how-to-play-btn").click(function() {
 		//$.mobile.changePage("#page1",{ transition: "slidedown"});
 		alert("asd");
@@ -145,4 +146,46 @@ $( document ).ready(function() {
     if(window.innerHeight > window.innerWidth){		
 		window.location.href = 'index.html';		
 	}
+	
+	$('.m-scooch').on('afterSlide', function (previousIndex, newIndex) {
+		
+		var currentDiv = $('div[data-index="' + previousIndex.delegateTarget._scooch._index + '"]')
+		var clickAudio = currentDiv.attr("audio-file");
+		//alert(clickAudio);
+		var clickaud = new Audio(clickAudio);
+		/*backaudio.addEventListener('ended', function() {
+			this.currentTime = 0;
+			this.play();
+		}, false);*/
+		clickaud.play();
+		//alert(newIndex+"after slide"+previousIndex.delegateTarget._scooch._index);			//$('.m-scooch').scooch('move', newIndex);
+		var preDiv = $( ".control-slider" ).find(".img-selected");		
+		//get selected div data-index
+		var prevDataIndex=preDiv.attr("data-index");
+		//remove class from selected div
+		preDiv.removeClass("img-selected");
+		//get image of the selected div
+		var preImg = preDiv.find("img");
+		//change selected images attributes
+		preImg.attr("src",beforeSelect[prevDataIndex]);
+		preImg.css("width","4%");
+		
+		//alert(prevDataIndex);
+		//get clicked div
+		var nextDataIndex = previousIndex.delegateTarget._scooch._index;
+		
+		//var preDiv = $( ".control-slider" ).find(".img-selected");		
+		
+		//add removed class to make current div active
+		currentDiv.addClass("img-selected");
+		
+		//get image under currently clicked div
+		var currentImg=currentDiv.find("img");
+		//change attribute of currently selected images
+		currentImg.attr("src",afterSelect[nextDataIndex]);
+		currentImg.css("width","10.5%");
+	});
+	/*$('.m-scooch').on('beforeSlide', function (previousIndex, newIndex) {
+		alert(newIndex+"before slide"+previousIndex);			//$('.m-scooch').scooch('move', newIndex);
+	});*/
 });

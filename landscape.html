@@ -18,6 +18,7 @@
   <!--<script src="js/codiqa.ext.min.js"></script>-->
   <!--<script src="js/color-app.js"></script>-->
   <script src="js/scooch.min.js"></script>
+  <script src="js/scooch23.min.js"></script>
   <script src="js/theisel.js"></script>
   <script src="js/theisel_landscape.js"></script>
   <style>
@@ -34,12 +35,12 @@
 		background-repeat:no-repeat;
 		background-position:0px 0px;
 		background-size:cover;">
-			<div data-role="popup" id="popupBasic" data-overlay-theme="b" data-position-to="origin" style="height:99%;">
+			<div data-role="popup" id="popupBasic" data-overlay-theme="b" data-position-to="origin">
 				<a href="#" data-rel="back" class="ui-btn-right">
 					<img src="img/How-to SVGs/With Parents_Close icon.svg" style="margin-left: 94%;width: 8%;margin-top:-3%;">
 				</a>
 				<!--<p>This is a completely basic popup, no options set.</p>-->
-				<div class="m-scooch m-fluid m-scooch-photos">
+				<div class="m-scooch23" style="overflow:hidden;">
 				  <!-- the slider -->
 				  <div class="m-scooch-inner">
 					<!-- the items -->
@@ -253,11 +254,10 @@
 	</div>
 	<script>
 		$('.m-scooch').scooch();
-		$('.m-scooch').scooch('unbind');
-	/*	$(document).on('pagebeforeshow', "#color", function (event, data) {
-			var parameters = $(this).data("url").split("?")[1];
-			parameter = parameters.replace("parameter=","");  
-			alert(parameter);
+		$('.m-scooch23').scooch();
+		$('.m-scooch23').scooch('unbind');
+		/*$('.m-scooch').on('beforeSlide', function (previousIndex, newIndex) {
+			alert(previousIndex.type + newIndex);
 		});*/
 		
 		</script>
@@ -318,41 +318,41 @@
 		  </div>
 		  
 		  <div style="margin-left: 35%;">
-			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num1" data-index="1">
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num1" data-index23="1">
 				  <img style="width: 15%" id="numimg1" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_1-Cresent.svg">
 			  </div>
 			  
-			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num2" data-index="2">
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num2" data-index23="2">
 				  <img style="width: 15%" id="numimg2" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_2-Heart.svg">
 			  </div>
 			  
-			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num3" data-index="3">
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num3" data-index23="3">
 				  <img style="width: 15%" id="numimg3" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_3-Clover.svg">
 			  </div>
 			  
 			  <div>
-				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num4" data-index="4">
+				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num4" data-index23="4">
 					  <img style="width: 15%" id="numimg4" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_4-Cross.svg">
 				  </div>
 				  
-				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num5" data-index="5">
+				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num5" data-index23="5">
 					  <img style="width: 15%" id="numimg5" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_5-Star.svg">
 				  </div>
 				  
-				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num6" data-index="6">
+				  <div style="display: inline" class="numpad-div" data-controltype="image" id="num6" data-index23="6">
 					  <img style="width: 15%" id="numimg6" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_6-Square.svg">
 				  </div>
 			  </div>
 			  
-			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num7" data-index="7">
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num7" data-index23="7">
 				  <img style="width: 15%" id="numimg7" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_7-Oval.svg">
 			  </div>
 			  
-			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num8" data-index="8">
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num8" data-index23="8">
 				  <img style="width: 15%" id="numimg8" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_8-Triangle.svg">
 			  </div>
 			  
-			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num9" data-index="9">
+			  <div style="display: inline" class="numpad-div" data-controltype="image" id="num9" data-index23="9">
 				  <img style="width: 15%" id="numimg9" class="bottomtheisel" src="img/settings/Lock Pad/Load-Screen_9-Circle.svg">
 			  </div>
 			</div>
