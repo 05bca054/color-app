@@ -88,8 +88,8 @@ $( document ).ready(function() {
 	
 	
 	$(".numpad-div").click(function() {		
-		$("img", this).effect("highlight", {color:"#669966"}, 2000);
-		//$(this).effect("highlight", {color:"#669966"}, 2000);
+		$("img", this).effect("highlight", {color:"black"}, 2000);
+		//$(this).effect("highlight", {color:"black"}, 2000);
 		var curVal = $("#number").val();
 		var matchNum = $("#setNumber").val();
 		if($("#number").val().length<3)
@@ -173,7 +173,7 @@ $( document ).ready(function() {
 	}
 	//Play and how-to-play button
 	$("#play-btn").click(function() {
-		$(this).effect("highlight", {color:"#669966"}, 1200);
+		$(this).effect("highlight", {color:"black"}, 1200);
 		setTimeout(function() {
 			$.mobile.changePage("#page1",{ transition: "slidedown"});
 		}, 1000 );
@@ -184,7 +184,7 @@ $( document ).ready(function() {
 		$.mobile.changePage("#page1",{ transition: "slidedown"});
 	});*/
 	$("#popupBasic").click(function(e){
-		$("#how-to-play-btn").effect("highlight", {color:"#669966"}, 2000);
+		$("#how-to-play-btn").effect("highlight", {color:"black"}, 2000);
 		var winHeight=$(window).height();
 		var winWidth=$(window).width();
 	   var parentOffset = $(this).parent().offset(); 
