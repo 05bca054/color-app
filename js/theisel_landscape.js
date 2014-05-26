@@ -17,9 +17,11 @@ $( document ).ready(function() {
 	{
 		var carouselMaxHeight = winHeight * 50 / 100;
 		var controlSliderHeight = winHeight * 40 / 100;
+		var backgroundTopMargin = winHeight * 3 / 100;
 		
 		//$("#page1").css("background-position","0 -35px");
 		$("#page1").css("background-size","100% 100%");
+		$("#page1").css("background-position","0 -"+backgroundTopMargin+"px");
 		$(".control-slider").css("height",controlSliderHeight+"px");
 		$(".control-slider").css("max-height",controlSliderHeight+"px");
 		//$(".ui-content").css("padding-bottom","0px");

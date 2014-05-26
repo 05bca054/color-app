@@ -98,7 +98,7 @@ $( document ).ready(function() {
 		if($("#number").val()==matchNum)
 		{
 			$("#number").val("");
-			$("body").css("line-height", "0.3");
+			//$("body").css("line-height", "0.3");
 			$.mobile.changePage("#sharer",{ transition: "slidedown"});
 		}
 		if($("#number").val().length==3 && $("#number").val()!=matchNum)
@@ -108,6 +108,7 @@ $( document ).ready(function() {
 		}
 	});	
 	//shaarer page coding starts	
+	/*
 	$("#sharer-img").click(function() {
         window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.jellybeez.com','_system');
      });
@@ -123,7 +124,58 @@ $( document ).ready(function() {
 	 $("#facebook-like").click(function() {
 		window.open('https://www.facebook.com/jellybeezapps','_system');
 	 });
-	 
+	*/
+	$("#sharer").click(function(e) {
+		var winHeight=$(window).height();
+		var winWidth=$(window).width();
+		var parentOffset = $(this).parent().offset(); 
+		//or $(this).offset(); if you really just want the current element's offset
+		var relX = e.pageX - parentOffset.left;
+		var relY = e.pageY - parentOffset.top;
+		//alert(relX+":"+relY);
+		var hlafWidth = winWidth/2;
+		var hlafHeight = winHeight/2;
+		//alert(hlafWidth+":"+hlafHeight);
+		var winXtop = winWidth * 40 / 100;
+		var winYtop = winHeight * 40 / 100;
+		
+		var winXbottom = winWidth * 60 / 100;
+		var winYbottom = winHeight * 60 / 100;
+		
+		//alert(winXtop+":"+winYtop+":"+winXbottom+":"+winYbottom);
+		
+		if(winXtop<relX && winYtop<relY && winXbottom>relX && winYbottom>relY)
+		{
+			//alert("back");
+			$.mobile.changePage("#page1",{ transition: "slidedown"});
+			//$('.m-scooch23').scooch('prev');
+		}
+		else if(hlafWidth>relX && hlafHeight>relY)
+		{
+			//alert("tweet");
+			window.open('https://twitter.com/JellyBeezApps','_system');
+			//$('.m-scooch23').scooch('prev');
+		}
+		else if(hlafWidth<relX && hlafHeight<relY)
+		{
+			//alert("website");
+			window.open('http://www.jellybeez.com','_system');
+			//$('.m-scooch23').scooch('next');
+		}
+		else if(hlafWidth>relX && hlafHeight<relY)
+		{
+			//alert("Like");
+			window.open('https://www.facebook.com/jellybeezapps','_system');
+			//$('.m-scooch23').scooch('next');
+		}
+		else if(hlafWidth<relX && hlafHeight>relY)
+		{
+			//alert("share");
+			window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.jellybeez.com','_system');
+			//$('.m-scooch23').scooch('next');
+		}
+		
+	});
 	 
 	 //orientation issues resolve
 	$( window ).on( "orientationchange", function( event ) {
