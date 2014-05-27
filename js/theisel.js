@@ -88,7 +88,12 @@ $( document ).ready(function() {
 	
 	
 	$(".numpad-div").click(function() {		
-		$("img", this).effect("highlight", {color:"black"}, 2000);
+		$("img", this).effect("fade", {color:"black"}, 2000);
+		var imgid = $("img", this).attr("id");
+		setTimeout(function() {
+			//alert("hello");
+			$("#"+imgid).show().fadeIn();
+		  }, 2000 );
 		//$(this).effect("highlight", {color:"black"}, 2000);
 		var curVal = $("#number").val();
 		var matchNum = $("#setNumber").val();
@@ -225,18 +230,26 @@ $( document ).ready(function() {
 	}
 	//Play and how-to-play button
 	$("#play-btn").click(function() {
-		$(this).effect("highlight", {color:"black"}, 1200);
+		$(this).effect("fade", {color:"black"}, 1200);
 		setTimeout(function() {
+			$("#play-btn").show().fadeIn();
 			$.mobile.changePage("#page1",{ transition: "slidedown"});
-		}, 1000 );
-		
-
+		}, 1200 );
 	});
 	/*$("#how-to-play-btn").click(function() {
 		$.mobile.changePage("#page1",{ transition: "slidedown"});
 	});*/
 	$("#popupBasic").click(function(e){
-		$("#how-to-play-btn").effect("highlight", {color:"black"}, 2000);
+		/*$("#how-to-play-btn").effect("fade", {color:"black"}, 2000);
+		setTimeout(function() {
+			$( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+		}, 1000 );*/
+		$("#how-to-play-btn").effect("fade", {color:"black"}, 2000);
+		var imgid = $("img", this).attr("id");
+		setTimeout(function() {
+			//alert("hello");
+			$("#how-to-play-btn").show().fadeIn();
+		  }, 2000 );
 		var winHeight=$(window).height();
 		var winWidth=$(window).width();
 	   var parentOffset = $(this).parent().offset(); 
