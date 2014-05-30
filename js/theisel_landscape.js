@@ -16,12 +16,12 @@ $( document ).ready(function() {
 	if(device=="Iphone5")
 	{
 		var carouselMaxHeight = winHeight * 50 / 100;
-		var controlSliderHeight = winHeight * 40 / 100;
+		var controlSliderHeight = winHeight * 39 / 100;
 		var backgroundTopMargin = winHeight * 3 / 100;
 		
 		//$("#page1").css("background-position","0 -35px");
 		$("#page1").css("background-size","100% 100%");
-		$("#page1").css("background-position","0 -"+backgroundTopMargin+"px");
+		//$("#page1").css("background-position","0 -"+backgroundTopMargin+"px");
 		$(".control-slider").css("height",controlSliderHeight+"px");
 		$(".control-slider").css("max-height",controlSliderHeight+"px");
 		//$(".ui-content").css("padding-bottom","0px");
@@ -80,6 +80,17 @@ $( document ).ready(function() {
 	afterSelect[9]="img/09 Black.svg";
 	afterSelect[10]="img/10 Brown.svg";
 		
+	$('<img src="'+ afterSelect[1] +'">').load(function() {})
+	$('<img src="'+ afterSelect[2] +'">').load(function() {})
+	$('<img src="'+ afterSelect[3] +'">').load(function() {})
+	$('<img src="'+ afterSelect[4] +'">').load(function() {})
+	$('<img src="'+ afterSelect[5] +'">').load(function() {})
+	$('<img src="'+ afterSelect[6] +'">').load(function() {})
+	$('<img src="'+ afterSelect[7] +'">').load(function() {})
+	$('<img src="'+ afterSelect[8] +'">').load(function() {})
+	$('<img src="'+ afterSelect[9] +'">').load(function() {})
+	$('<img src="'+ afterSelect[10] +'">').load(function() {})
+	
 	$( ".control-div" ).click(function() {
 		//find selected div 		
 		var clickAudio = $(this).attr("audio-file");
@@ -100,7 +111,7 @@ $( document ).ready(function() {
 		var preImg = preDiv.find("img");
 		//change selected images attributes
 		preImg.attr("src",beforeSelect[prevDataIndex]);
-		preImg.css("width","4%");
+		//preImg.css("width","4%");
 		
 		//alert(prevDataIndex);
 		//get clicked div
@@ -108,13 +119,13 @@ $( document ).ready(function() {
 		//add removed class to make current div active
 		$(this).addClass("img-selected");
 		//move slide related to current div
-		$('.m-scooch').scooch('move', nextDataIndex);
+		//$('.m-scooch').scooch('move', nextDataIndex);
 		
 		//get image under currently clicked div
 		var currentImg=$(this).find("img");
 		//change attribute of currently selected images
 		currentImg.attr("src",afterSelect[nextDataIndex]);
-		currentImg.css("width","10.5%");
+		//currentImg.css("width","10.5%");
 		
 		//alert(nextDataIndex);		
 	});	
@@ -170,7 +181,7 @@ $( document ).ready(function() {
 		var preImg = preDiv.find("img");
 		//change selected images attributes
 		preImg.attr("src",beforeSelect[prevDataIndex]);
-		preImg.css("width","4%");
+		//preImg.css("width","4%");
 		
 		//alert(prevDataIndex);
 		//get clicked div
@@ -185,7 +196,7 @@ $( document ).ready(function() {
 		var currentImg=currentDiv.find("img");
 		//change attribute of currently selected images
 		currentImg.attr("src",afterSelect[nextDataIndex]);
-		currentImg.css("width","10.5%");
+		//currentImg.css("width","10.5%");
 	});
 	/*$('.m-scooch').on('beforeSlide', function (previousIndex, newIndex) {
 		alert(newIndex+"before slide"+previousIndex);			//$('.m-scooch').scooch('move', newIndex);
