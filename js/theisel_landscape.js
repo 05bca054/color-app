@@ -16,7 +16,7 @@ $( document ).ready(function() {
 	if(device=="Iphone5")
 	{
 		var carouselMaxHeight = winHeight * 50 / 100;
-		var controlSliderHeight = winHeight * 39 / 100;
+		var controlSliderHeight = winHeight * 40 / 100;
 		var backgroundTopMargin = winHeight * 3 / 100;
 		
 		//$("#page1").css("background-position","0 -35px");
