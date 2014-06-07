@@ -148,6 +148,8 @@ $( document ).ready(function() {
 			$(this).css("width","77%");
 			$("#popupBasic-popup").css("top","10%");
 			$("#popupBasic-popup").css("bottom","8%");
+			$("#popupBasic-screen").css("height","100%");
+			//alert("fgdfg");
            /* $(this).popup("reposition", {
                 x: 40,
                 y: 40,
