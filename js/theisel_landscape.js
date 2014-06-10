@@ -111,7 +111,7 @@ $( document ).ready(function() {
 		var preImg = preDiv.find("img");
 		//change selected images attributes
 		preImg.attr("src",beforeSelect[prevDataIndex]);
-		//preImg.css("width","4%");
+		preImg.css("width","6.5%");
 		
 		//alert(prevDataIndex);
 		//get clicked div
@@ -125,7 +125,7 @@ $( document ).ready(function() {
 		var currentImg=$(this).find("img");
 		//change attribute of currently selected images
 		currentImg.attr("src",afterSelect[nextDataIndex]);
-		//currentImg.css("width","10.5%");
+		currentImg.css("width","9.5%");
 		
 		//alert(nextDataIndex);		
 	});	
@@ -183,7 +183,7 @@ $( document ).ready(function() {
 		var preImg = preDiv.find("img");
 		//change selected images attributes
 		preImg.attr("src",beforeSelect[prevDataIndex]);
-		//preImg.css("width","4%");
+		preImg.css("width","6.5%");
 		
 		//alert(prevDataIndex);
 		//get clicked div
@@ -198,7 +198,7 @@ $( document ).ready(function() {
 		var currentImg=currentDiv.find("img");
 		//change attribute of currently selected images
 		currentImg.attr("src",afterSelect[nextDataIndex]);
-		//currentImg.css("width","10.5%");
+		currentImg.css("width","9.5%");
 	});
 	/*$('.m-scooch').on('beforeSlide', function (previousIndex, newIndex) {
 		alert(newIndex+"before slide"+previousIndex);			//$('.m-scooch').scooch('move', newIndex);
